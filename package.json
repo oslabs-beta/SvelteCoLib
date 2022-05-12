@@ -41,5 +41,10 @@
     "svelte-preprocess": "^4.10.6",
     "typescript": "~4.6.2"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "node": "^17.7.2",
+    "nodemon": "^2.0.16",
+    "svelte-checkbox": "^1.0.1"
+  }
 }
