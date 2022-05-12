@@ -33,10 +33,11 @@
 
     const customStyles = [
         {
-            stylesFor: 'header',
-            height: '50px',
-            width: '80%',
-            backgroundColor: 'coral'
+            headerStyles: {
+                height: '50px',
+                width: '80%',
+                backgroundColor: 'coral'
+            }
         }
     ]
 </script>
