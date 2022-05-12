@@ -33,10 +33,15 @@
     "jest-transform-stub": "^2.0.0",
     "prettier": "^2.5.1",
     "prettier-plugin-svelte": "^2.5.0",
-    "svelte": "^3.44.0",
+    "svelte": "^3.48.0",
     "svelte-check": "^2.2.6",
     "svelte-jester": "^2.3.2",
     "typescript": "~4.6.2"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "node": "^17.7.2",
+    "nodemon": "^2.0.16",
+    "svelte-checkbox": "^1.0.1"
+  }
 }
