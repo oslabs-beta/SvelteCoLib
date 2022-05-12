@@ -15,6 +15,7 @@
     }
 </script>
 
+<!-- replace this with accessible Button component -->
 <button 
     class='header-button'
     aria-expanded={expanded}
