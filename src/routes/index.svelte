@@ -3,7 +3,7 @@
 <script>
 // @ts-nocheck
 
-    
+    import Input from '../lib/components/Input.svelte'; 
     import AccordionItem from "../lib/components/Accordion/AccordionItem.svelte";
     import Accordion from '../lib/components/Accordion/Accordion.svelte'
     import Button from '../lib/components/Button.svelte';
@@ -72,8 +72,14 @@
   </Accordion>
 </fieldset>
 
+<<<<<<< HEAD
+<Input label="Name" id="name" type="text" placeholder="eg. John Smith"/><br><br>
+<Input label="Email" id="email" type="email" placeholder="eg. jsmith@gmail.com"/><br><br>
+<Input label="Phone" id="phone" type="tel" placeholder="eg. 123-456-7890"/><br><br>
+=======
 <Checkbox/>
 
+>>>>>>> main
 
 
 <!-- ************************* Styles ************************* -->
