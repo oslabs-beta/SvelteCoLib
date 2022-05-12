@@ -59,7 +59,7 @@ describe('Button unit tests:', () => {
  *    - if activation does NOT dismiss current context:
  *        focus typ. returns to button
  *    - opens a dialog:
- *        focus movies inside the dialog
+ *        focus moves inside the dialog
  *    - closes a dialog:
  *        focus typ. returns to button that opened the dialog
  *    - action indicates a context change
