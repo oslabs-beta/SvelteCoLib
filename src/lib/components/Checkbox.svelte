@@ -4,36 +4,25 @@
 	let checkedThree = false;
 </script>
 
-<!------------------------------------------------------------------- Check One ------------------------------------------------------------------->
-<label id="checkBoxOne" aria-label="checkbox">
-	<input aria-label="Check Box Option One" type="checkbox" bind:checked={checkedOne} />
-	BIG ONE
-</label>
+<fieldset>
+	<legend> Check Box</legend>
+	<!------------------------------------------------------------------- Check One ------------------------------------------------------------------->
+	<label id="checkBoxOne" aria-label="checkbox">
+		<input aria-label="Check Box Option One" type="checkbox" bind:checked={checkedOne} />
+		BIG ONE
+	</label>
 
-<br />
+	<br />
 
-<!------------------------------------------------------------------- Check Two ------------------------------------------------------------------->
-<input
-	aria-label="Check Box Option Two"
-	id="checkBoxTwo"
-	type="checkbox"
-	bind:checked={checkedTwo}
-/>
-<label for="checkBoxTwo">BIG TWO</label>
+	<!------------------------------------------------------------------- Check Two ------------------------------------------------------------------->
+	<input
+		aria-label="Check Box Option Two"
+		id="checkBoxTwo"
+		type="checkbox"
+		bind:checked={checkedTwo}
+	/>
+	<label for="checkBoxTwo">BIG TWO</label>
+</fieldset>
 
-<br />
-<!------------------------------------------------------------------- Check Three ------------------------------------------------------------------->
-
-<input
-	aria-label="Check Box Option Three"
-	id="checkBoxThree"
-	type="checkbox"
-	bind:checked={checkedThree}
-/>
-<label for="checkBoxThree">BIG THREE</label>
-
-<br />
-
-<!------------------------------------------------------------------- Check Four ------------------------------------------------------------------->
 <style>
 </style>
