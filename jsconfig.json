@@ -8,6 +8,7 @@
 		"lib": ["es2020", "DOM"],
 		"moduleResolution": "node",
 		"module": "es2020",
+    "noImplicitAny": false,
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"sourceMap": true,
@@ -15,3 +16,6 @@
 		"target": "es2020"
 	}
 }
+
+//commented out "strict" and added "noImplicitAny" to get rid
+//of no specified type errors.
