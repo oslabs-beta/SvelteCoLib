@@ -1,3 +1,4 @@
+
 <!-- ************************* Scripts ************************* -->
 <script>
 // @ts-nocheck
@@ -6,6 +7,7 @@
     import AccordionItem from "../lib/components/Accordion/AccordionItem.svelte";
     import Accordion from '../lib/components/Accordion/Accordion.svelte'
     import Button from '../lib/components/Button.svelte';
+    import Checkbox from '../lib/components/Checkbox.svelte';
 
 
     const options = {
@@ -69,6 +71,8 @@
     {/each}
   </Accordion>
 </fieldset>
+
+<Checkbox/>
 
 
 
