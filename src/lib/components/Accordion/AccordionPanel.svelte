@@ -4,6 +4,9 @@
     export let isOpen
     export let panelID
     export let labeledBy;
+    export let style;
+
+    console.log(style)
 </script>
 
 
@@ -13,6 +16,7 @@
     class:open-panel={isOpen} 
     id="{panelID}"
     aria-labelledby={labeledBy}
+    {style}
 >
 {#if isOpen}
     <p>{panelContent}</p>

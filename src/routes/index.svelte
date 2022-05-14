@@ -13,7 +13,7 @@
     const options = {
       // multiselectable: true,
       headerLevel: 4,
-      styles: ['height: 50px; width: 100%; background-color: coral; border: 1px solid black'],
+      styles: ['height: 50px; width: 100%; background-color: coral; border: 1px solid black', 'background-color: yellow'],
       panelInfo: [
         {
           id: 1,
