@@ -5,9 +5,10 @@
     export let headerLevel = 3;
     export let headerTitle;
     export let controls = '';
-    export let buttonID
     export let style;
     export let textToRead;
+    export let id;
+    export let isOpen;
 
 
 
@@ -20,13 +21,13 @@
     {style}
 >
     <AccordionButton 
-        on:changeState
         on:updatePanelStates
         {textToRead}
         {headerTitle} 
         {controls} 
-        {buttonID} 
+        {id} 
         {style}
+        {isOpen}
     />
 </div>
 

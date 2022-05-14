@@ -9,13 +9,15 @@
     export let customStyles;
     export let isOpen;
 
-    let state = 'closed'
+    // let state = 'closed'
     // let isOpen = false
 
-    const changeState = () => {
-        state === 'open' ? state = 'closed' : state = 'open'
-        // isOpen = !isOpen
-    }
+    $: state = isOpen? 'expanded' : 'collapsed'
+
+    // const changeState = () => {
+    //     state === 'open' ? state = 'closed' : state = 'open'
+    //     // isOpen = !isOpen
+    // }
 
 </script>
 
@@ -25,14 +27,14 @@ class="accordion-item"
 data-state={state}
 >
     <AccordionHeader 
-        on:changeState={changeState}
         on:updatePanelStates
         headerTitle={options.headerTitle} 
         {headerLevel} 
         controls={`panel${options.id}`} 
-        buttonID={`button${options.id}`}
+        id={`button${options.id}`}
         textToRead={options.panelContent}
         style={customStyles[0]}
+        {isOpen}
     />
     <AccordionPanel 
         panelContent={options.panelContent} 

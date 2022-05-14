@@ -6,7 +6,6 @@ import { onMount } from "svelte";
     export let multiselectable = false;
 
     let panelStates = []
-    console.log(panelStates)
 
     onMount(() => {
         for (let i = 0; i < options.panelInfo.length; i++) {
