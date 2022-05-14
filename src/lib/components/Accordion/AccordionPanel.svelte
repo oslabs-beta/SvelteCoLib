@@ -24,6 +24,7 @@
     .accordion-panel {
         height: 0;
         width: 100%;
+        border: 0;
     }
 
     .open-panel {

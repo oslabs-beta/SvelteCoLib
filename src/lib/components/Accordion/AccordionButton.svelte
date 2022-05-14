@@ -4,14 +4,18 @@
     export let headerTitle;
     export let controls;
     export let buttonID;
-    export let customStyles;
+    export let style;
+    export let textToRead;
 
     const dispatch = createEventDispatcher();
 
     let expanded = false;
-    const handleHeaderClick = () => {
+    const handleHeaderClick = (event) => {
         expanded = !expanded;
         dispatch('changeState')
+        dispatch('updatePanelStates', {
+            target: event.target.id
+        })
     }
 </script>
 
@@ -20,8 +24,10 @@
     class='header-button'
     aria-expanded={expanded}
     aria-controls="{controls}"
+    aria-label={expanded ? textToRead : ''}
     id={buttonID}
-    on:click={handleHeaderClick}
+    on:click={(event) => handleHeaderClick(event)}
+    {style}
 >
     {headerTitle ? headerTitle : 'Please define header title in options object!'}
 </button>
