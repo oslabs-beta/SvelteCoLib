@@ -1,27 +1,31 @@
 <script>
 // @ts-nocheck
     import { createEventDispatcher } from 'svelte'
+
     export let headerTitle;
     export let controls;
-    export let buttonID;
-    export let customStyles;
+    export let id
+    export let style;
+    export let textToRead;
+    export let isOpen
 
     const dispatch = createEventDispatcher();
-
-    let expanded = false;
-    const handleHeaderClick = () => {
-        expanded = !expanded;
-        dispatch('changeState')
+    const handleHeaderClick = (event) => {
+        dispatch('updatePanelStates', {
+            target: event.target.id
+        })
     }
 </script>
 
 <!-- replace this with accessible Button component -->
 <button 
     class='header-button'
-    aria-expanded={expanded}
+    aria-expanded={isOpen}
     aria-controls="{controls}"
-    id={buttonID}
-    on:click={handleHeaderClick}
+    aria-label={isOpen ? textToRead : ''}
+    {id}
+    on:click={(event) => handleHeaderClick(event)}
+    {style}
 >
     {headerTitle ? headerTitle : 'Please define header title in options object!'}
 </button>

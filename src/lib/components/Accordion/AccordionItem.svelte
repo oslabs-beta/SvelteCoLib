@@ -4,17 +4,12 @@
     import AccordionPanel from './AccordionPanel.svelte'
     import AccordionHeader from "./AccordionHeader.svelte";
 
-    export let options = {};
+    export let options = {}
     export let headerLevel = 2
     export let customStyles;
+    export let isOpen;
 
-    let state = 'closed'
-    let isOpen = false
-
-    const changeState = () => {
-        state === 'open' ? state = 'closed' : state = 'open'
-        isOpen = !isOpen
-    }
+    $: state = isOpen? 'expanded' : 'collapsed'
 
 </script>
 
@@ -24,18 +19,24 @@ class="accordion-item"
 data-state={state}
 >
     <AccordionHeader 
-        on:changeState={changeState} 
+        on:updatePanelStates
+
         headerTitle={options.headerTitle} 
+        controls={`panel${options.id}`} 
+        id={`button${options.id}`}
+        textToRead={options.panelContent}
+        style={customStyles[0]}
+
+        {isOpen}
         {headerLevel} 
-        controls={options.id} 
-        buttonID={options.buttonID}
-        customStyles={customStyles[0]}
     />
     <AccordionPanel 
         panelContent={options.panelContent} 
+        panelID={`panel${options.id}`}
+        labeledBy={`button${options.id}`}
+        style={customStyles[1]}
+
         {isOpen} 
-        panelID={options.id} 
-        labeledBy={options.buttonID}
     />
 </div>
 

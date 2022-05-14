@@ -5,8 +5,12 @@
     export let headerLevel = 3;
     export let headerTitle;
     export let controls = '';
-    export let buttonID
-    export let customStyles;
+    export let style;
+    export let textToRead;
+    export let id;
+    export let isOpen;
+
+
 
 </script>
 
@@ -14,13 +18,16 @@
     class='accordion-header' 
     aria-level={headerLevel} 
     role='heading'
+    {style}
 >
     <AccordionButton 
-        on:changeState 
+        on:updatePanelStates
+        {textToRead}
         {headerTitle} 
         {controls} 
-        {buttonID} 
-        {customStyles}
+        {id} 
+        {style}
+        {isOpen}
     />
 </div>
 
