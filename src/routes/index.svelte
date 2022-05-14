@@ -72,7 +72,16 @@
 	</Accordion>
 </fieldset>
 
-<Checkbox />
+<fieldset>
+	<legend> Check Box</legend>
+	<Checkbox checkBoxValue="" id="" checked="" />
+</fieldset>
+<fieldset>
+	<legend> Form </legend>
+	<Input label="Name" id="name" type="text" placeholder="eg. John Smith" /><br /><br />
+	<Input label="Email" id="email" type="email" placeholder="eg. jsmith@gmail.com" /><br /><br />
+	<Input label="Phone" id="phone" type="tel" placeholder="eg. 123-456-7890" /><br /><br />
+</fieldset>
 
 <!-- ************************* Styles ************************* -->
 <style>
