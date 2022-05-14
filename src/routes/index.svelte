@@ -59,9 +59,17 @@
 </div>
 
 <fieldset id="buttons">
-	<legend>Buttons</legend>
-	<Button />
+  <legend>Buttons</legend>
+  <label for="DemoButton">Accessible button component</label>
+  <Button 
+    id="DemoButton"
+    label="Accessible button"
+    content="Do action"
+    handleClick={(event) => alert(`Some event or action has been activated by button (id: ${event.target.id}).`)}
+    style={demoBtnStyles}
+  />
 </fieldset>
+
 
 <fieldset id="accordions">
 	<legend>Accordion</legend>
