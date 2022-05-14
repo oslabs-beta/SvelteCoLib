@@ -3,7 +3,6 @@ import { onMount } from "svelte";
 
     import AccordionItem from "./AccordionItem.svelte";
     export let options;
-    export let multiselectable = false;
 
     let panelStates = []
 
@@ -20,7 +19,7 @@ import { onMount } from "svelte";
             return panelStates[panelIndex] = false
         }
 
-        if (!multiselectable) {
+        if (!options.multiselectable) {
         for (let i = 0; i < options.panelInfo.length; i++) {
                 if (i !== panelIndex) {
                     panelStates[i] = false
@@ -35,7 +34,7 @@ import { onMount } from "svelte";
 
 </script>
 
-<div class="accordion-main" aria-multiselectable={multiselectable}>
+<div class="accordion-main" aria-multiselectable={options.multiselectable}>
     {#each options.panelInfo as info , i}
     <AccordionItem 
         options={info} 

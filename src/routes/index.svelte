@@ -11,6 +11,7 @@
 
 
     const options = {
+      // multiselectable: true,
       headerLevel: 4,
       styles: ['height: 50px; width: 100%; background-color: coral; border: 1px solid black'],
       panelInfo: [
@@ -53,7 +54,7 @@
 
 <fieldset id="accordions">
   <legend>Accordion</legend>
-  <Accordion multiselectable='true' options={options}/>
+  <Accordion options={options}/>
 </fieldset>
 
 <Input label="Name" id="name" type="text" placeholder="eg. John Smith"/><br><br>
