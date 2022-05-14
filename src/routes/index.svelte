@@ -43,6 +43,8 @@
             }
         }
     ]
+
+    const demoBtnStyles = "font-size: 18px; font-weight: 600; background-color: #eee; color: rgb(29, 29, 29); padding: .75em 1.25em; border: 1.5px solid rgb(29, 29, 29); width: fit-content;"
 </script>
 
 
@@ -60,8 +62,16 @@
 
 <fieldset id="buttons">
   <legend>Buttons</legend>
-  <Button />
+  <label for="DemoButton">Accessible button component</label>
+  <Button 
+    id="DemoButton"
+    label="Accessible button"
+    content="Do action"
+    handleClick={(event) => alert(`Some event or action has been activated by button (id: ${event.target.id}).`)}
+    style={demoBtnStyles}
+  />
 </fieldset>
+
 
 <fieldset id="accordions">
   <legend>Accordion</legend>
@@ -72,14 +82,8 @@
   </Accordion>
 </fieldset>
 
-<<<<<<< HEAD
-<Input label="Name" id="name" type="text" placeholder="eg. John Smith"/><br><br>
-<Input label="Email" id="email" type="email" placeholder="eg. jsmith@gmail.com"/><br><br>
-<Input label="Phone" id="phone" type="tel" placeholder="eg. 123-456-7890"/><br><br>
-=======
 <Checkbox/>
 
->>>>>>> main
 
 
 <!-- ************************* Styles ************************* -->
